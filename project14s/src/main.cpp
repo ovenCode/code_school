@@ -97,7 +97,7 @@ int main()
         cout << *(delta + i) << " ";
         if ((i + 1) % 3 == 0)
             cout << endl;
-    }
+    } a
 
     // RETURN STATEMENT
 
