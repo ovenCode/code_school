@@ -1,4 +1,0 @@
-﻿  Z211_Anthony_Bosca_lab5.cpp
-C:\Users\antho\code_school\project6\Project6\Project6\src\Z211_Anthony_Bosca_lab5.cpp(440,12): warning C4101:  'id': unreferenced local variable
-C:\Users\antho\code_school\project6\Project6\Project6\src\Z211_Anthony_Bosca_lab5.cpp(440,12): warning C4101: C:\Users\antho\code_school\project6\Project6\Project6\src\Z211_Anthony_Bosca_lab5.cpp(462) : error C4700: uninitialized local variable 'l_start' used
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(423,5): error MSB6006: "CL.exe" exited with code 2.
