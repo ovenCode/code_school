@@ -3,15 +3,15 @@
         {
             "type": "shell",
             "label": "g++.exe build active file",
-            "command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+            "command": "C:/msys64/mingw64/bin/g++.exe",
             "args": [
                 "-g",
-                "${file}",
+                "M:/code_school//project21s/main.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "M:/code_school//project21s/main.exe"
             ],
             "options": {
-                "cwd": "C:\\msys64\\mingw64\\bin"
+                "cwd": "M:/code_school//project21s"
             }
         }
     ],
