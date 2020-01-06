@@ -25,9 +25,9 @@ int main()
         cout << graf[i] << endl;
     }
     
-    t(graf);
+    //t(graf);
 
-    // odpowiedz(graf);
+    odpowiedz(graf);
 
     return 0;
 }
@@ -38,7 +38,7 @@ void odpowiedz(vector<int> graf)
     int a = graf[0], b = graf[1], temp = 0, temp2 = 0;
     vector<int> wierzcholki, wynik;
 
-    for (int i = 0; i < graf.size() - 2; i + 2)
+    for (int i = 0; i < graf.size() - 2; i += 2)
     {
         if (a < graf[i])
         {
@@ -62,7 +62,7 @@ void odpowiedz(vector<int> graf)
 
     temp = wierzcholki.size();
 
-    for (int i = 0; i < graf.size() - 2; i+2)
+    for (int i = 0; i < graf.size() - 2; i+=2)
     {
         for (int j = 0; j < wierzcholki.size() - 1; j++)
         {
@@ -84,10 +84,10 @@ void odpowiedz(vector<int> graf)
         cout << wynik[i] << " ";
     }
     cout << "2: " << wynik.size();
-   /*  for (int i = 1; i < wynik.size() - 1; i+2)
+     for (int i = 1; i < wynik.size() - 1; i+=2)
         {
             cout << wynik[i] << " ";
-        }  */
+        }
     }
 
     void t(vector<int> graf)
