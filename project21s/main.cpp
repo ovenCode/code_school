@@ -20,10 +20,10 @@ int main()
             graf.push_back(wierzJ);
         }
     }
-    for (int i = 0; i < graf.size(); i++)
+    /* for (int i = 0; i < graf.size(); i++)
     {
         cout << graf[i] << endl;
-    }
+    } */
     
     //t(graf);
 
@@ -84,10 +84,10 @@ void odpowiedz(vector<int> graf)
         cout << wynik[i] << " ";
     }
     cout << "2: " << wynik.size();
-     for (int i = 1; i < wynik.size() - 1; i+=2)
+     /*for (int i = 1; i < wynik.size() - 1; i+=2)
         {
             cout << wynik[i] << " ";
-        }
+        } */
     }
 
     void t(vector<int> graf)
