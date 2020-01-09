@@ -38,19 +38,27 @@ void odpowiedz(vector<int> graf)
     int a = graf[0], b = graf[1], temp = 0, temp2 = 0, maks = 0;
     vector<int> wierzcholki, wynik, tempy;
 
-    for (int i = 0; i < graf.size() - 2; i += 2)
+    for (int i = 0; i < graf.size(); i += 2)
     {
-        if (a < graf[i])
+        if ((a <= graf[i]) && (graf[i] > graf[i + 1]))
         {
             maks = graf[i];
+        }
+        else if ((a <= graf[i]) && (graf[i] < graf[i + 1]))
+        {
+            maks = graf[i + 1];
+        }
+
+        if (a < graf[i])
+        {
             temp = a;
             a = graf[i];
             graf[i] = temp;
-            if(maks < graf[i+1]) maks = graf[i+1];
             temp2 = b;
             b = graf[i + 1];
             graf[i + 1] = temp2;
         }
+        
     }
 
     for (int i = 0; i < maks; i++)
@@ -60,26 +68,31 @@ void odpowiedz(vector<int> graf)
     
     for (int i = 0; i < graf.size(); i++)
     {
-        if (temp != graf[i])
+       
+        if (i==0)
         {
-            if (i==0)
+            wierzcholki.push_back(graf[i]);
+        }
+        for (int j = 0; j < wierzcholki.size(); j++)
+        {
+            if(graf[i] != wierzcholki[j])
             {
-                wierzcholki.push_back(graf[i]);
-                temp = graf[i];
-            }
-            cout << "Inside for 1: " << i << endl;
-            for (int j = 0; j < wierzcholki.size(); j++)
-            {
-                cout << "Inside for 2: " << j << endl;
-                if(graf[i] != wierzcholki[j])
+                if (tempy[i] < 1)
                 {
-                    tempy[graf[i] - 1]++;
+                    wierzcholki.push_back(i);
                 }
+                tempy[graf[i]]++;
+                if (i < tempy.size())
+                {
+                    i++;
+                }
+                else continue;
             }
-            
         }
         
     }
+
+    
 
     for (int i = 0; i < wierzcholki.size(); i++)
     {
