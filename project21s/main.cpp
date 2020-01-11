@@ -75,13 +75,13 @@ void odpowiedz(vector<int> graf)
         }
         for (int j = 0; j < wierzcholki.size(); j++)
         {
-            if(graf[i] != wierzcholki[j])
+            if((graf[i] != wierzcholki[j]) && (graf[i] < wierzcholki[j]))
             {
                 if (tempy[i] < 1)
                 {
                     wierzcholki.push_back(i);
                 }
-                tempy[graf[i]]++;
+                tempy[graf[i] - 1]++;
                 if (i < tempy.size())
                 {
                     i++;
