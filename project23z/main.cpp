@@ -17,7 +17,11 @@ int main()
 
     // MAIN VARIABLES INITIALIZATION
 
+    int sets = 0, number = 0;
+
     //
+
+    cout << iToString(27) << " " << iToString(328) << " " << iToString(8);
 
     return 0;
 }
@@ -26,31 +30,58 @@ int main()
 
 int powe(int podstawa, int wykladnik)
 {
+    int wynik = 1;
+
     for (int i = 0; i < wykladnik; i++)
     {
-        if (i == 0)
+        if (wykladnik == 0)
         {
             return 1;
         }
-        else if (i == 1)
+        else if (wykladnik == 1)
         {
             return podstawa;
         }
         else
         {
-            podstawa *= podstawa;
+            wynik *= podstawa;
         }
     }
+
+    return wynik;
 }
 
 string iToString(int liczba)
 {
-    int licznik = 0;
+    int licznik = 0, jednostka = 0;
+    string znaki = "";
+    char temp = ' ';
 
-    while (powe(licznik, 10) < liczba)
+    while (powe(10, licznik) < liczba)
     {
         licznik++;
     }
+
+    licznik = licznik - 1;
+    
+    for(int i = 0; i < licznik; i++)
+    {
+        while (jednostka * powe(10,licznik) < liczba)
+        {
+            jednostka++;
+        }
+
+        jednostka = jednostka - 1;
+
+        temp = jednostka - 48;
+
+        jednostka = 0;
+
+        znaki = znaki + temp;
+    }
+    
+
+    return znaki;
 }
 
 //
