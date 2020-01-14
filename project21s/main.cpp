@@ -136,3 +136,13 @@ void t(vector<int> graf)
     sam.push_back(a);
     cout << sam[0];
 }
+
+/*
+1
+5
+1 2
+1 3
+1 4
+2 4
+4 6
+ */
