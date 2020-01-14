@@ -21,7 +21,7 @@ int main()
 
     //
 
-    cout << iToString(27) << " " << iToString(328) << " " << iToString(8);
+    cout << iToString(27) << endl << endl << iToString(328) << endl << endl << iToString(8);
 
     return 0;
 }
@@ -53,7 +53,7 @@ int powe(int podstawa, int wykladnik)
 
 string iToString(int liczba)
 {
-    int licznik = 0, jednostka = 0;
+    int licznik = 0, jednostka = 0, ilosc_petli = 0;
     string znaki = "";
     char temp = ' ';
 
@@ -63,8 +63,16 @@ string iToString(int liczba)
     }
 
     licznik = licznik - 1;
+    ilosc_petli = licznik;
+
+    cout << "licznik: " << licznik << endl;
     
-    for(int i = 0; i < licznik; i++)
+    if(licznik == 0)
+    {
+        
+    }
+
+    for(int i = 0; i < ilosc_petli; i++)
     {
         while (jednostka * powe(10,licznik) < liczba)
         {
@@ -73,11 +81,18 @@ string iToString(int liczba)
 
         jednostka = jednostka - 1;
 
-        temp = jednostka - 48;
+        cout << jednostka << "<--- jednostka" << endl;
 
+        temp = ' ' + jednostka - 48;
+        znaki = " " + jednostka;
+
+        liczba = liczba - jednostka * powe(10,licznik);
         jednostka = 0;
+        licznik = licznik - 1;
 
-        znaki = znaki + temp;
+
+        //znaki = znaki + temp;
+
     }
     
 
