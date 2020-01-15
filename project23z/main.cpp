@@ -21,7 +21,7 @@ int main()
 
     //
 
-    cout << iToString(27) << endl << endl << iToString(328) << endl << endl << iToString(8);
+    cout << stringToI("27") << endl << endl << stringToI("328") << endl << endl << stringToI("8");
 
     return 0;
 }
@@ -92,4 +92,15 @@ string iToString(int liczba)
     }
     
     return znaki;
+}
+
+int stringToI(string wyraz)
+{
+	int wynik = 0;
+	
+	for(int i = 0;i < wyraz.length(); i++)
+	{
+		wynik = wynik + (wyraz[i] - 48)*powe(10,wyraz.length()-i - 1);
+	}
+	return wynik;
 }
