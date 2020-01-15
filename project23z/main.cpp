@@ -83,18 +83,21 @@ string iToString(int liczba)
 
         cout << jednostka << "<--- jednostka" << endl;
 
-        temp = ' ' + jednostka - 48;
-        znaki = " " + jednostka;
+        
+        temp = jednostka + 48;
+
+        cout << endl << temp << " oto temp" << endl;
 
         liczba = liczba - jednostka * powe(10,licznik);
         jednostka = 0;
         licznik = licznik - 1;
 
 
-        //znaki = znaki + temp;
+        znaki = znaki + temp;
 
     }
     
+    cout << "oto znaki ------>" << znaki << endl;
 
     return znaki;
 }
