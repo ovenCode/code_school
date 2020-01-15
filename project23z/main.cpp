@@ -63,9 +63,8 @@ string iToString(int liczba)
     }
 
     licznik = licznik - 1;
-    ilosc_petli = licznik;
+    ilosc_petli = licznik + 1;
 
-    cout << "licznik: " << licznik << endl;
     
     if(licznik == 0)
     {
@@ -74,32 +73,23 @@ string iToString(int liczba)
 
     for(int i = 0; i < ilosc_petli; i++)
     {
-        while (jednostka * powe(10,licznik) < liczba)
+        while (jednostka * powe(10,licznik) <= liczba)
         {
             jednostka++;
         }
 
+       
         jednostka = jednostka - 1;
 
-        cout << jednostka << "<--- jednostka" << endl;
-
-        
         temp = jednostka + 48;
-
-        cout << endl << temp << " oto temp" << endl;
 
         liczba = liczba - jednostka * powe(10,licznik);
         jednostka = 0;
         licznik = licznik - 1;
-
-
-        znaki = znaki + temp;
+		
+		znaki = znaki + temp;
 
     }
     
-    cout << "oto znaki ------>" << znaki << endl;
-
     return znaki;
 }
-
-//
