@@ -40,20 +40,20 @@ for (int i = 0; i < T; i++)
         if (W > 0)
         {
 
-            for (int k = 0; k < P; k++)
-            {
-                S[k] = G[k];
-            }
+            // for (int k = 0; k < P; k++)
+            // {
+            //     S[k] = G[k];
+            // }
             
-            if (B == P)
-            {
+            // if (B == P)
+            // {
                 
-                for (int k = 0; k < P; k++)
-                {
-                    cout << G[k] << " ";
-                }
+            //     for (int k = 0; k < P; k++)
+            //     {
+            //         cout << G[k] << " ";
+            //     }
                 
-            }
+            // }
             
         }
         
