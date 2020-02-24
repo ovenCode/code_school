@@ -75,6 +75,21 @@ void mbr(vector <int> a, char c)
             {
                 left = a[i];
             }
+            if(a[i] > right)
+            {
+                right = a[i];
+            }
+        }
+        for(int i = 1;i < a.size() - 1; i + 2)
+        {
+            if(a[i] < bottom)
+            {
+                bottom = a[i];
+            }
+            if(a[i] > top)
+            {
+                top = a[i];
+            }
         }
         
     }
