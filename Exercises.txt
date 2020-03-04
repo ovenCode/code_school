@@ -6,9 +6,11 @@ Project26z
 
 https://www.spoj.com/problems/ONP/
 
-Projects in progress
+Project32z
 
-https://www.spoj.com/problems/HS12MBR/
+https://www.spoj.com/problems/HS12HDPW/
+
+Projects in progress
 
 https://www.spoj.com/problems/AMR11E/
 
