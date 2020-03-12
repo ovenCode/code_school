@@ -10,48 +10,49 @@ namespace HiddenPassword
     {
         static void Main()
         {
-            //int t = 0, n = 0, pos = 0;
+            int t = 0, n = 0, pos = 0;
             string s = "ala";
-            //List<string> box = new List<string>();
-            //t = Convert.ToInt32(Console.ReadLine());
-            //t++;
-            //n++;
-            //pos++;
+            List<char []> box = new List<char []>();
+            t = Convert.ToInt32(Console.ReadLine());
+            
+            
+           
 			Console.WriteLine(ConvToBin(s[0]));
-            /*for (int i = 0; i < t; i++)
+            for (int i = 0; i < t; i++)
             {
                 n = Convert.toInt32(Console.ReadLine());
                 s = Console.ReadLine();
                 pos = s.indexOf(" ");
-                for (int j = 0; j < n; j++)
-                {
-                    box.Add(s.Substring());
-                }
+			      
+			      foreach(string a in s.Split(" "))
+			      {
+			      	
+			      }
                 foreach (string a in box)
                 {
                     foreach (char c in a)
                     {
-
                     }
                 }
-            }*/
+            }
         }
 
         public static string ConvToBin(char c)
         {
-            int temp = 0, pos = 0;
+            int temp = 0, pos = 0, start = 0;
             string s = "00000000";
             temp = c;
             char[]change = s.ToCharArray();
-            /*while (temp != 0)
-            {
-                while (Math.Pow(2, pos) < temp)
+            
+            //while (temp != 0)
+            //{
+                while (Math.Pow(2, start) < temp)
                 {
-                    pos++;
+                    start++;
                 }
-            }*/
-
-            while(temp > 1)
+            //}
+				pos = 8 - start;
+            while(temp > 0)
             {
                 if (temp%2==1)
                 {
