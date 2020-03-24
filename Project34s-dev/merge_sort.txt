@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int * tab_merge (int *,int *,int,int);
+int * tab_split (int *, int, int);
+
+int main() {
+	// your code goes here
+	return 0;
+}
+
+int * tab_merge(int *a,int *b, int x, int y)
+{
+	
+}
+
+int * tab_split (int [] a, int l, int r)
+{
+	int x = 0;
+	int * b, * c;
+	if((r-l)%2 == 0) x = (r-l)/2;
+	else x = (r-l)/2 + 1;
+	
+	b = tab_split(a,l,x);
+	c = tab_split(a,x + 1,r);
+	
+	return tab_merge(b,c,x,x+1);
+}
