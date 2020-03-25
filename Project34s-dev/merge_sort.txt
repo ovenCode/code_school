@@ -6,23 +6,42 @@ int * tab_split (int *, int, int);
 
 int main() {
 	// your code goes here
+	int a[5] = { 5,12,4,3,0 };
+	cout << tab_split(a,0,5) << endl;
 	return 0;
 }
 
 int * tab_merge(int *a,int *b, int x, int y)
 {
+	int *c = new int [x+y];
+	for(int i = 0; i < x + y;i++)
+	{
+		if(a[x] <= b[0])
+		{
+			c[i] = a[i];
+			c[x + 1 + i] = b[i];
+		}
+		else if (a[x] > b[0])
+		{
+			c[i] = b[i];
+			c[y + 1 + i] = a[i];
+		}
+	}
 	
+	return c;
 }
 
-int * tab_split (int [] a, int l, int r)
+int * tab_split (int a [], int l, int r)
 {
 	int x = 0;
 	int * b, * c;
 	if((r-l)%2 == 0) x = (r-l)/2;
 	else x = (r-l)/2 + 1;
-	
+	if(x > 1)
+	{
 	b = tab_split(a,l,x);
 	c = tab_split(a,x + 1,r);
+	}
 	
-	return tab_merge(b,c,x,x+1);
+	return tab_merge(b,c,x,r);
 }
